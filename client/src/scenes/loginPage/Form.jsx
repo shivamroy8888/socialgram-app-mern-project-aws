@@ -68,7 +68,7 @@ const Form = () => {
     formData.append("picturePath", values.picture.name);
 
     const savedUserResponse = await fetch(
-      "http://localhost:3001/auth/register",
+      "https://social-app-zo55.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -96,7 +96,7 @@ const Form = () => {
   };
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await axios.post("http://localhost:3001/auth/login", values);
+    const loggedInResponse = await axios.post("https://social-app-zo55.onrender.com/auth/login", values);
     // const loggedIn = await loggedInResponse.json();
     onSubmitProps.resetForm();
     console.log(loggedInResponse);

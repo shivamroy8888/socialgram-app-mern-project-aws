@@ -42,7 +42,7 @@ const PostWidget = ({
   const primary = palette.primary.main;
 
   const patchLike = async () => {
-    const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+    const response = await fetch(`https://social-app-zo55.onrender.com/posts/${postId}/like`, {
       method: "PATCH",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -55,7 +55,7 @@ const PostWidget = ({
   };
   const deletePost = async ()=>{
     if(postUserId===loggedInUserId){
-      const response = await fetch(`http://localhost:3001/posts/${postId}/delete`,{
+      const response = await fetch(`https://social-app-zo55.onrender.com/posts/${postId}/delete`,{
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
